@@ -1,0 +1,75 @@
+{% extends 'admin/admin_base.html'%}
+{% block content %}
+<style>
+    tr {
+          background-color:#00204a;
+          color:white;
+          text-align: center;
+        }
+       th {
+            color: black;
+       }
+</style>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<div>
+    
+
+         <div class="container" style="margin-top:5px"><br><br>
+        <center>
+            <h1 style="color:white;">Testing Report</h1></center>
+        <br><br>
+
+
+
+        <table class="table" style="margin-left:-100px; font-size:12px;">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+
+                <th>Property</th>
+                <th>Recycle</th>
+                <th>Compound</th>
+                <th>Chemical Formula</th>
+                <th>Polymer</th>
+                <th>Mixing</th>
+                <th>Made from type</th>
+                <th>Type</th>
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr style="background-color:#00204a;color:white;text-align: center;">
+
+            {% for i in values %}
+
+                <td>{{i.property}}</td>
+                <td>{{i.recycle}}</td>
+                <td>{{i.compound}}</td>
+                <td>{{i.chemical_formula}}</td>
+                <td>{{i.polymer}}</td>
+                <td>{{i.mixing}}</td>
+                <td>{{i.made_from_type}}</td>
+                <td>{{i.type}}</td>
+
+
+
+
+            </tr>
+
+
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'vendor/vendor_base.html'%}
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<style>
+
+
+
+
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+</style>
+<div>
+    <div class="container" style="margin-top:5px"><br><br>
+        <center>
+            <h1 style="color:white;">GeneratorId</h1></center>
+        <br><br>
+
+
+        <table class="table" style="margin-left:-70px; font-size:14px;">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+
+                <th>Mineral Type</th>
+                <th>Polymer Type</th>
+                <th>Gases</th>
+                <th>Rubber Type</th>
+                <th>Duration</th>
+                <th>Industry</th>
+                <th>Product</th>
+                <th>Storage Type</th>
+                <th>Chemical Type</th>
+                <th>Property</th>
+                <th>Supply Id</th>
+                <th>Need</th>
+<!--                <th>Address</th>-->
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in synthetic %}
+            <tr style="background-color:#00204a;color:white;text-align: center;">
+
+
+                <td>{{i.mineral_type}}</td>
+                <td>{{i.polymer_type}}</td>
+                <td>{{i.gases}}</td>
+                <td>{{i.rubber_type}}</td>
+                <td>{{i.duration}}</td>
+                <td>{{i.industry}}</td>
+                <td>{{i.product}}</td>
+                <td>{{i.storage_type}}</td>
+                <td>{{i.chemical_type}}</td>
+                <td>{{i.property}}</td>
+                <td>{{i.need_chemical}}</td>
+                <button>
+                <td><a href="/generate_synthetic_id/{{i.id}}/"><input type="submit" formaction="/generate_synthetic_id/{{i.id}}/" class='button-17'
+                        value="Supply Id"></a></td>
+                    </button>
+<!--                <td><a href="/give_email_syn/{{i.id}}/"><button class="btn btn-info">SEND ADDRESS</button></a></td>-->
+
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

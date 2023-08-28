@@ -1,0 +1,74 @@
+{% extends 'process/process_base.html'%}
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<div>
+    <div class="container" style="margin-top:5px"><br><br>
+        <center>
+            <h1 style="color:white;">view Synthetic Rubber Report</h1></center>
+        <br><br>
+
+
+
+        <table class="table" style="margin-left:-130px; font-size:12px;">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+
+                <th>Mineral Type</th>
+                <th>Polymer Type</th>
+                <th>Gases</th>
+                <th>Rubber Type</th>
+                <th>Duration</th>
+                <th>Storage Type</th>
+                <th>Chemical Type</th>
+                <th>Supply Id</th>
+                <th>Need</th>
+                <th>Address</th>
+                <th>Availability</th>
+                <th>Remaining(barrel)</th>
+                <th>Fix Date</th>
+
+
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in synthetic %}
+            <tr style="background-color:#00204a;color:white;text-align: center;">
+
+
+                <td>{{i.mineral_type}}</td>
+                <td>{{i.polymer_type}}</td>
+                <td>{{i.gases}}</td>
+                <td>{{i.rubber_type}}</td>
+                <td>{{i.duration}}</td>
+                <td>{{i.storage_type}}</td>
+                <td>{{i.chemical_type}}</td>
+                <td>{{i.need_chemical}}</td>
+                <td>{{i.give_vendor_email}}</td>
+                 <td>{{i.syn_id}}</td>
+                <td>{{i.availability}}</td>
+                <td>{{i.remaining}}</td>
+                <td>{{i.fixing_date1}}</td>
+<!--                 <td><a href="/syn_company_process_unit/{{i.id}}/"><button class="btn btn-info">Send To Process Unit</button></a></td>-->
+
+
+            </tr>
+
+
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login/style.css' %}">
+    <title>Document</title>
+</head>
+<style>
+
+
+.button-87 {
+ margin-top:50px;
+ color:orangered;
+ padding:5px 10px;
+ border: 2px solid black;
+ border-radius:10px;
+ background:aqua;
+ height:40px;
+ width:80px;
+}
+.button-87:nth-of-type(2){
+margin-left:15rem;
+}
+.button-87 a{
+margin-top:-10px;
+color:orangered;
+}
+</style>
+<body style="background-image: url('/static/login/login.jpg');">
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<h1 style="color:#674747; margin-left: 500px; margin-top: 25px;" >Vendor register</h1>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="login-reg-panel">
+		<div class="login-info-box">
+			<h2>Have an account?</h2>
+<!--			<p>Lorem ipsum dolor sit amet</p>-->
+			<label id="label-register" for="log-reg-show">Login</label>
+			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+		</div>
+							
+		<div class="register-info-box">
+			<h2>Don't have an account?</h2>
+<!--			<p>Lorem ipsum dolor sit amet</p>-->
+			<label id="label-login" for="log-login-show">Register</label>
+			<input type="radio" name="active-log-panel" id="log-login-show">
+		</div>
+							
+		<div class="white-panel">
+			<div class="login-show">
+				<h2>LOGIN</h2>
+				<form action="/vendor_login/" method="post">
+				{% csrf_token %}
+				<input type="text" name="email"   style="margin:5px; margin-top: 40px; margin-bottom:15px; padding:5px;" placeholder="Email">
+				<input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" style="margin:5px; margin-bottom:15px; padding:5px;" placeholder="Password">
+					<button class="button-87">Login</button>
+					<button class="button-87"><a href="/">Home</a></button>
+			    </form>
+			</div>
+			<div class="register-show">
+				<h2>REGISTER</h2>
+				<form action="/vendor_register/" method="post">
+				{% csrf_token %}
+				<input type="text" style="margin:5px; margin-bottom:10px; padding:5px;" name="username" placeholder="Enter your name">
+				<input type="text" style="margin:5px; margin-bottom:10px;  padding:5px;"  name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  placeholder="Enter your email id">
+				<input type="password" style="margin:5px; margin-bottom:10px;  padding:5px;" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password">
+				<input type="text" style="margin:5px; margin-bottom:10px;  padding:5px;" name="contact_no" pattern="[6789][0-9]{9,}" maxlength="10" placeholder="Enter your phone number">
+				<input type="text" style="margin:5px; margin-bottom:10px;  padding:5px;" name="address" placeholder="Enter your ID">
+				<input type="text" style="margin:5px; margin-bottom:10px;  padding:5px;" name="age" placeholder="Enter your dept no">
+                <button class="button-87">Register</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+ <script src="{% static 'login/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+{% extends 'company/company_base.html' %}
+{% block content %}
+{% load static %}
+<head>
+<title>Medical Appointment Form a Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Medical Appointment Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates, 
+ Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!--fonts--> 
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+	<style>
+		p, h1, h2 {
+			color: white;
+		}
+
+
+
+
+.button-75 {
+  align-items: center;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-75:active {
+  outline: 0;
+}
+
+.button-75:hover {
+  outline: 0;
+}
+
+.button-75 span {
+  transition: all 200ms;
+}
+
+.button-75:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+@media screen and (max-width: 991px) {
+  .button-75 {
+    font-size: 15px;
+    height: 50px;
+  }
+
+  .button-75 span {
+    line-height: 50px;
+  }
+}
+	</style>
+<!--//fonts--> 
+</head>
+<body>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+   </script>
+<!--background-->
+<h1>Upload Synthetic Rubber details</h1>
+    <div class="bg-agile" style="margin-left:450px;">
+	<div class="book-appointment">
+
+			<form action="/synthetic_raw_materials/" method="post">
+				{% csrf_token %}
+
+			<div class="gaps">
+				<p>Chemical Type</p>
+					<select class="form-control" name="chemical_type" style="width:320px;">
+						<option></option>
+						<option value="petrochemical feedstocks">petrochemical feedstocks</option>
+
+					</select>
+			</div>
+
+			{% for i in regi %}
+				<div class="gaps">
+				<p>Email</p>
+						<input type="text" name="email" value="{{i.email}}" />
+				</div>
+				{% endfor %}
+
+				<div class="gaps">
+				<p>Need Chemical</p>
+						<input type="text" name="need_chemical"  />
+				</div>
+
+			<div class="left-agileits-w3layouts same">
+				<div class="gaps">
+				<p>Mineral Type</p>
+					<select class="form-control" name="mineral_type" style="width:320px;">
+						<option></option>
+						<option value="petroleum">petroleum</option>
+						<option value="coal">coal</option>
+						<option value="oil">oil</option>
+						<option value="natural gas">natural gas</option>
+						<option value="acetylene">acetylene</option>
+
+					</select>
+			</div>
+
+			<div class="left-agileits-w3layouts same">
+				<div class="gaps">
+				<p>Gases</p>
+					<select class="form-control" name="gases" style="width:320px;">
+						<option></option>
+						<option value="butadien">butadien</option>
+						<option value="styrene">styrene</option>
+
+
+					</select>
+			</div>
+
+
+
+
+			<div class="left-agileits-w3layouts same">
+				<div class="gaps">
+				<p>Polymer Type</p>
+					<select class="form-control" name="polymer_type" style="width:320px;">
+						<option></option>
+						<option value="Polychloroprene (generally sold by the trade name Neoprene)">Polychloroprene (generally sold by the trade name Neoprene)</option>
+						<option value="Polybutadiene Poly(styrene-butadiene-styrene) rubber or SBS rubber">Polybutadiene Poly(styrene-butadiene-styrene) rubber or SBS rubber</option>
+						<option value="Polyisobutylene Silicone among other">Polyisobutylene ISilicone among other</option>
+
+					</select>
+			</div>
+
+
+
+				<div class="gaps">
+				<p>Rubber Type</p>
+					<select class="form-control" name="rubber_type" style="width:320px;">
+						<option></option>
+						<option value="neoprene">neoprene</option>
+						<option value="Buna rubbers">Buna rubbers</option>
+						<option value="Isoprene Rubber">Isoprene Rubber</option>
+						<option value="butyl rubbers">butyl rubbers</option>
+						<option value="Silicone Rubber">Silicone Rubber</option>
+						<option value="butyl rubbers">butyl rubbers</option>
+						<option value="Nitrile Rubber">Nitrile Rubber</option>
+					</select>
+			</div>
+
+			<div class="gaps">
+				<p>Product</p>
+					<select class="form-control" name="product" style="width:320px;">
+						<option></option>
+						<option value="Tire industry (car, aircraft and bicycle tires)">Tire industry (car, aircraft and bicycle tires)</option>
+						<option value="Medical equipment">Medical equipment</option>
+						<option value="Floor coverings">Floor coverings</option>
+						<option value="Hoses">Hoses</option>
+						<option value="Drive belts">Drive belts</option>
+					</select>
+			</div>
+				<div class="gaps">
+				<p>Property</p>
+					<select class="form-control" name="property" style="width:320px;">
+						<option></option>
+						<option value="Better abrasion resistance">Better abrasion resistance</option>
+						<option value="Good Elasticity">Good Elasticity</option>
+						<option value="Electrical insulation material">Electrical insulation material</option>
+						<option value="Flexible at low temperatures">Flexible at low temperatures</option>
+						<option value="Resistant to grease& oil">Resistant to grease& oil</option>
+						<option value="Flame retardant">Flame retardant</option>
+					</select>
+			</div>
+
+			<div class="gaps">
+				<p>Storage Type</p>
+					<select class="form-control" name="storage_type" style="width:320px;">
+						<option></option>
+						<option value="rubbers must be stored cool and they have to avoid direct sunlight">rubbers must be stored cool and they have to avoid direct sunlight</option>
+						<option value="must be stored dry">must be stored dry</option>
+					</select>
+			</div>
+
+			<div class="gaps">
+				<p>Industry Type</p>
+					<select class="form-control" name="industry" style="width:320px;">
+						<option></option>
+						<option value="transportation">transportation</option>
+						<option value="industrial products">industrial products</option>
+						<option value="consumer products">consumer products</option>
+						<option value=" hygienic and medical sectors"> hygienic and medical sectors</option>
+
+					</select>
+			</div>
+
+
+			<div class="gaps">
+				<p>Duration</p>
+					<select class="form-control" name="duration" style="width:320px;">
+						<option></option>
+						<option value="5 years">5 Years</option>
+						<option value="7 years">7 years</option>
+					</select>
+			</div>
+
+			</div>
+			<div class="clear"></div><br><br>
+				<button class="button-75" role="button"><span class="text">	 Upload synthetic details</span></button>
+
+			</form>
+		</div>
+   </div>
+   <!--copyright-->
+			<div class="copy w3ls">
+<!--		       <p>&copy; 2017. Medical Appointment Form . All Rights Reserved  | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>-->
+	        </div>
+		<!--//copyright-->
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/wickedpicker.js"></script>
+			<script type="text/javascript">
+				$('.timepicker').wickedpicker({twentyFour: false});
+			</script>
+		<!-- Calendar -->
+				<link rel="stylesheet" href="css/jquery-ui.css" />
+				<script src="js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+
+</body>
+</html>
+{% endblock %}

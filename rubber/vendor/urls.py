@@ -1,0 +1,37 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('vendor_login/', views.vendor_login, name='vendor_login'),
+    path('vendor_register/', views.vendor_register, name='vendor_register'),
+    path('vendor_home/', views.vendor_home, name='vendor_home'),
+    path('vendor_logout/', views.vendor_logout, name='vendor_logout'),
+    path('view_natural_rubber/', views.view_natural_rubber, name='view_natural_rubber'),
+    path('view_synthetic_rubber/', views.view_synthetic_rubber, name='view_synthetic_rubber'),
+    path('check_availability/<int:id>/', views.check_availability, name='check_availability'),
+    path('fixing_date_natural/<int:id>/', views.fixing_date_natural, name='fixing_date_natural'),
+    path('view/', views.view, name='view'),
+    path('send_fixing_date_natural/', views.send_fixing_date_natural, name='send_fixing_date_natural'),
+    path('disappear_fixing_date_natural/<int:id>/', views.disappear_fixing_date_natural),
+    path('view_natural/', views.view_natural, name='view_natural'),
+    path('generate_natural_id/<int:id>/', views.generate_natural_id, name='generate_natural_id'),
+    path('give_email/<int:id>/', views.give_email, name="give_email"),
+    path('view_synthetic/', views.view_synthetic, name='view_synthetic'),
+    path('generate_synthetic_id/<int:id>/', views.generate_synthetic_id, name='generate_synthetic_id'),
+    path('give_email_syn/<int:id>/', views.give_email_syn, name='give_email_syn'),
+    path('check_availability_syn/<int:id>/', views.check_availability_syn, name='check_availability_syn'),
+    path('view1/', views.view1, name='view1'),
+    path('fixing_date_synthetic/<int:id>/', views.fixing_date_synthetic),
+    path('send_fixing_date_synthetic/', views.send_fixing_date_synthetic),
+    path('disappear_fixing_date_syn/<int:id>/', views.disappear_fixing_date_syn),
+    path('graph_view/', views.graph_view),
+    path('view_graph/', views.view_graph),
+    path('view_graph1/', views.view_graph1),
+    path('view_graph2/', views.view_graph2),
+    path('vendor_natural_graph/', views.vendor_natural_graph),
+    path('send_natural_graph/<int:id>/', views.send_natural_graph),
+    path('vendor_syn_graph/', views.vendor_syn_graph),
+    path('send_syn_graph/<int:id>/', views.send_syn_graph),
+    path('vendor_syn_nan_graph/', views.vendor_syn_nan_graph),
+    path('send_syn_nan_graph/<int:id>/', views.send_syn_nan_graph)
+]

@@ -1,0 +1,59 @@
+{% extends 'admin/admin_home.html'%}
+
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<div>
+    <div class="container" style="margin-top:5px"><br><br>
+        <center>
+            <h1 style="color:white;">Vendor Approve</h1></center>
+        <br><br>
+
+
+        <table class="table">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+
+                <th>Username</th>
+                <th>Email</th>
+                <th>PhoneNo</th>
+                <th>Address</th>
+                <th>Age</th>
+                <th>Approve Process</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in values %}
+            <tr style="background-color:#00204a;color:white;text-align: center;">
+
+
+                <td>{{i.username}}</td>
+
+                <td>{{i.email}}</td>
+
+                <td>{{i.contact_no}}</td>
+
+                <td>{{i.address}}</td>
+
+                <td>{{i.age}}</td>
+
+                <td><a href="/true_vendor/{{i.id}}/"><button class="btn btn-info">Approve</button></a></td>
+
+
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'company/company_base.html'%}
+
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<div>
+    <div class="container" style="margin-top:5px"><br><br>
+        <center>
+            <h1 style="color:white;">Send Natural Rubber Raw materials</h1></center>
+        <br><br>
+
+
+        <table class="table" style="margin-left:-100px;overflow-x: auto;">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:#F7F6DC;text-align: center;">
+
+                <th>Latex Method</th>
+                <th>Need Latex</th>
+                <th>Latex Char</th>
+                <th>Acid</th>
+                <th>Time Taken</th>
+                <th>Polymer</th>
+                <th>Industry</th>
+                <th>Product</th>
+                <th>Type Of Trees</th>
+                <th>Type of Plants</th>
+                <th>Property</th>
+                <th>subject</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in natural %}
+            <tr style="background-color:#FFC090;color:black;text-align: center;">
+
+
+                <td>{{i.latex_method}}</td>
+                <td>{{i.need_latex}}</td>
+                <td>{{i.latex_char}}</td>
+                <td>{{i.acid}}</td>
+                <td>{{i.Time_taken}}</td>
+                <td>{{i.polymer}}</td>
+                <td>{{i.industry}}</td>
+                <td>{{i.product}}</td>
+                <td>{{i.type_of_trees}}</td>
+                <td>{{i.type_of_plants}}</td>
+                <td>{{i.property}}</td>
+                {% if i.send_natural is False %}
+
+                <td><a href="/natural_company/{{i.id}}/"><button class="btn btn-primary">SEND TO VENDOR</button></a></td>
+                {% else %}
+                <td> Successfully send</td>
+
+
+            </tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
+

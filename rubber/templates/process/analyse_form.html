@@ -1,0 +1,204 @@
+
+<!DOCTYPE HTML>
+<html>
+{% extends 'process/process_base.html' %}
+{% block content %}
+{% load static %}
+<head>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link href="css/wickedpicker.css" rel="stylesheet" type='text/css' media="all" />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+	<style>
+		p, h1, h2 {
+			color: white;
+		}
+	</style>
+
+</head>
+<style>
+
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+</style>
+<body>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+   </script>
+<!--background-->
+<h1>Upload Rubber details</h1>
+    <div class="bg-agile" style="margin-left:450px;">
+	<div class="book-appointment">
+
+			<form action="/analyse_form/" method="post">
+				{% csrf_token %}
+
+
+			<div class="left-agileits-w3layouts same">
+				<div class="gaps">
+				<p>Property</p>
+					<select class="form-control" name="property" style="width:320px;">
+						<option></option>
+						<option value="soft">soft</option>
+						<option value="oil resistance">oil resistance</option>
+						<option value="heat aging">heat aging</option>
+						<option value="weather resistance">weather resistance</option>
+						<option value="water soluble">water soluble</option>
+						<option value="aging weather">aging weather</option>
+
+					</select>
+			</div>
+
+			<div class="left-agileits-w3layouts same">
+				<div class="gaps">
+				<p>recycle=</p>
+					<select class="form-control" name="recycle" style="width:320px;">
+						<option></option>
+						<option value="yes">yes</option>
+						<option value="no">no</option>
+
+
+					</select>
+			</div>
+				<div class="left-agileits-w3layouts same">
+				<div class="gaps">
+				<p>compound</p>
+					<select class="form-control" name="compound" style="width:320px;">
+						<option></option>
+						<option value="hydrophobic">hydrophobic</option>
+						<option value="chloroprene">chloroprene</option>
+						<option value="liquid hydrocarbon">liquid hydrocarbon</option>
+						<option value="ethylene and propylene">ethylene and propylene</option>
+
+					</select>
+			</div>
+
+
+
+				<div class="gaps">
+				<p>Chemical Formula</p>
+					<select class="form-control" name="chemical_formula" style="width:320px;">
+						<option></option>
+						<option value="CN">CN</option>
+						<option value="siloxane">siloxane</option>
+						<option value="isoprene">isoprene</option>
+						<option value="(C5H8)n">(C5H8)n</option>
+
+					</select>
+			</div>
+
+
+
+			<div class="gaps">
+				<p>mixing</p>
+					<select class="form-control" name="mixing" style="width:320px;">
+						<option></option>
+						<option value="base gums">base gums</option>
+						<option value="carbon">carbon</option>
+						<option value="vinylidene fluoride">vinylidene fluoride</option>
+					</select>
+			</div>
+
+
+				<div class="gaps">
+				<p>made_from</p>
+					<select class="form-control" name="made_from_type" style="width:320px;">
+						<option></option>
+						<option value="petroleum">petroleum</option>
+						<option value="oil resistant">oil resistant</option>
+						<option value="quartz sand">quartz sand</option>
+						<option value="actylene">actylene</option>
+					</select>
+			</div>
+
+			<div class="gaps">
+				<p>Type</p>
+					<select class="form-control" name="type" style="width:320px;">
+						<option></option>
+						<option value="syn">Synthetic</option>
+						<option value="syn/nat">Synthetic/Natural</option>
+
+					</select>
+			</div>
+
+
+        <div class="gaps">
+				<p>Polymer</p>
+					<select class="form-control" name="polymer" style="width:320px;">
+						<option></option>
+						<option value="elastomeric">Elastomeric</option>
+						<option value="polysiloxane">Polysiloxane</option>
+						<option value="polychloroprene">Polychloroprene</option>
+						<option value="silicone">Silicone</option>
+
+					</select>
+	    </div>
+
+
+			</div>
+				<br><br>
+			<div class="clear"></div>
+				<button class="button-24">
+					Upload synthetic details
+
+					</button>
+		</form>
+		</div>
+   </div>
+
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/wickedpicker.js"></script>
+			<script type="text/javascript">
+				$('.timepicker').wickedpicker({twentyFour: false});
+			</script>
+
+				<link rel="stylesheet" href="css/jquery-ui.css" />
+				<script src="js/jquery-ui.js"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+
+
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends 'vendor/vendor_base.html'%}
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<style>
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+</style>
+<div>
+    <div class="container" style="margin-top:5px; overflow-x: scroll;"><br><br>
+        <center>
+            <h1 style="color:white;"></h1></center>
+        <br><br>
+           <form method="post" action="/fixing_date_synthetic/{{i.id}}/" >
+            {% csrf_token %}
+
+
+        <table class="table" style="margin-left:-100px; font-size:12px;">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+
+                <th>Mineral Type</th>
+                <th>Polymer Type</th>
+                <th>Gases</th>
+                <th>Rubber Type</th>
+                <th>Duration</th>
+                <th>Storage Type</th>
+                <th>Chemical Type</th>
+                <th>Supply Id</th>
+                <th>Need chemical</th>
+<!--                <th>Address</th>-->
+                <th>Availability</th>
+                <th>Remaining(barrel)</th>
+                <th>Fix Date</th>
+                <th>Status</th>
+
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in synthetic %}
+            <tr style="background-color:#00204a;color:white;text-align: center;">
+
+
+                <td>{{i.mineral_type}}</td>
+                <td>{{i.polymer_type}}</td>
+                <td>{{i.gases}}</td>
+                <td>{{i.rubber_type}}</td>
+                <td>{{i.duration}}</td>
+                <td>{{i.storage_type}}</td>
+                <td>{{i.chemical_type}}</td>
+                     <td>{{i.syn_id}}</td>
+                <td>{{i.need_chemical}}</td>
+<!--                <td>{{i.give_vendor_email}}</td>-->
+
+                <td>{{i.availability}}</td>
+                <td>{{i.remaining}}</td>
+
+                <td><input type="date" name="fixing_date1"></td>
+
+                <td><a href="/fixing_date_synthetic/{{i.id}}/"><input type="submit" formaction="/fixing_date_synthetic/{{i.id}}/" class="button-56"  value="Fix"></a></td>
+
+            </tr>
+
+
+            </tr>
+
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

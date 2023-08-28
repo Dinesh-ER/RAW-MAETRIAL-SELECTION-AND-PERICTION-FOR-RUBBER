@@ -1,0 +1,216 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+{% extends 'company/company_base.html' %}
+{% block content %}
+{% load static %}
+<head>
+<title>Medical Appointment Form a Responsive Widget Template :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Medical Appointment Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs Sign up Web Templates, 
+ Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- Custom Theme files -->
+<link href="{% static 'form/css/wickedpicker.css' %}" rel="stylesheet" type='text/css' media="all" />
+<link href="{% static 'form/css/style.css' %}{% static '" rel='stylesheet' type='text/css' />
+<!--fonts--> 
+<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<!--//fonts-->
+	<style>
+
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+		p, h1, h2 {
+			color: white;
+		}
+	</style>
+</head>
+<body>
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+   </script>
+<!--background-->
+<h1> Upload Natural Raw Materials</h1>
+    <div class="bg-agile" style="margin-left:450px;">
+	<div class="book-appointment">
+
+
+
+
+
+		<form action="/natural_raw_materials/" method="post">
+				{% csrf_token %}
+			<div class="left-agileits-w3layouts same">
+			<div class="gaps">
+				<p style="margin-top: 30px;">Latex Method</p>
+					<input type="text" name="latex_method" placeholder="" required=""/>
+			</div>
+				{% for i in regi %}
+				<div class="gaps">
+				<p>Email</p>
+						<input type="text" name="email" value="{{i.email}}" />
+				</div>
+				{% endfor %}
+				<div class="gaps">
+				<p>Need Latex</p>
+						<input type="text" name="need_latex" placeholder="" required="" />
+				</div>
+				<div class="gaps">
+				<p>Time Taken</p>
+						<input type="text" name="Time_taken" placeholder="" required="" />
+				</div>
+				<div class="gaps">
+				<p>Add Acid</p>
+						<input type="text" name="acid" placeholder="" required="" />
+				</div>
+				<div class="gaps">
+				<p>Polymer</p>
+						<input type="text" name="polymer" placeholder="" required="" />
+				</div>
+
+
+
+			<div class="gaps">
+				<p>Industry Type</p>
+					<select class="form-control" name="industry" style="width:320px;">
+						<option>Choose</option>
+						<option value="Construction industry">Construction industry</option>
+						<option value="Healthcare industry">Healthcare industry</option>
+						<option value="Automotive parts industry">Automotive parts industry</option>
+						<option value="Chemical industry">Chemical industry</option>
+						<option value="Transportation industry">Transportation industry</option>
+						<option value="Agriculture industry">Agriculture industry</option>
+					</select>
+			</div>
+
+
+			<div class="gaps">
+				<p>Character</p>
+					<select class="form-control" name="latex_char" style="width:320px;">
+						<option>Choose</option>
+						<option value="milky fluid">milky fluid</option>
+						<option value="elasticity">elasticity</option>
+						<option value="toughness">toughness</option>
+					</select>
+			</div>
+
+
+			<div class="gaps">
+				<p>Trees</p>
+					<select class="form-control" name="type_of_trees" style="width:320px;">
+						<option>Choose</option>
+						<option value="Hevea brasiliensis">Hevea brasiliensis</option>
+						<option value="Ficus elastica">Ficus elastica</option>
+
+					</select>
+			</div>
+				<div class="gaps">
+				<p>Product</p>
+					<select class="form-control" name="product" style="width:320px;">
+						<option>Choose</option>
+						<option value="medical devices">medical devices</option>
+						<option value="surgical gloves">surgical gloves</option>
+						<option value="aircraft and car tires">aircraft and car tires</option>
+						<option value="pacifiers">pacifiers</option>
+						<option value="clothes">clothes</option>
+						<option value="toys">toys</option>
+					</select>
+			</div>
+
+			<div class="gaps">
+				<p>type</p>
+					<select class="form-control" name="type_of_plants" style="width:320px;">
+						<option>Choose</option>
+						<option value="Robusta">Robusta</option>
+						<option value="Tricolor">Tricolor</option>
+						<option value="Yellow Gem">Yellow Gem</option>
+						<option value="Black Prince">Black Prince</option>
+						<option value="Abidjan">Abidjan</option>
+						<option value="Burgundy">Burgundy</option>
+
+					</select>
+			</div>
+
+			<div class="gaps">
+				<p>Property</p>
+					<select class="form-control" name="property" style="width:320px;">
+						<option>Choose</option>
+						<option value="high strength (tensile and tear)">high strength (tensile and tear)</option>
+						<option value="low heat generation">low heat generation</option>
+						<option value="extends retreadability">extends retreadability</option>
+						<option value="integrity">integrity</option>
+						<option value="high resilience and large stretch ratio">high resilience and large stretch ratio</option>
+
+					</select>
+			</div>
+
+
+
+			</div>
+			<div class="clear"></div><br>
+			<button class="button-62">
+						 Upload Natural rubber details
+				</button>
+			</form>
+		</div>
+   </div>
+   <!--copyright-->
+			<div class="copy w3ls">
+<!--		       <p>&copy; 2017. Medical Appointment Form . All Rights Reserved  | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>-->
+	        </div>
+		<!--//copyright-->
+		<script type="text/javascript" src="{% static 'form/js/jquery-2.1.4.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'form/js/wickedpicker.js' %}"></script>
+			<script type="text/javascript">
+				$('.timepicker').wickedpicker({twentyFour: false});
+			</script>
+		<!-- Calendar -->
+				<link rel="stylesheet" href="{% static 'form/css/jquery-ui.css' %}" />
+				<script src="{% static 'form/js/jquery-ui.js' %}"></script>
+				  <script>
+						  $(function() {
+							$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+						  });
+				  </script>
+			<!-- //Calendar -->
+
+</body>
+</html>
+{% endblock %}

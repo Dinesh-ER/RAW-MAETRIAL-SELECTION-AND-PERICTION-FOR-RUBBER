@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href="{% static 'index/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'index/css/examples.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'index/css/jquery.fancybox.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'index/css/slider-pro.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'index/css/timeline.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'index/css/style.css' %}" rel='stylesheet' type='text/css' />
+    <link href="{% static 'index/css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <style>
+        .banner-top {
+            background: url('/static/index/images/company-img.jpg') no-repeat 0px 0px;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -moz-background-size: cover;
+            min-height: 750px;
+        }
+        .covering {
+            background: rgba(37, 37, 37, 0.4);
+            min-height: 1000px;
+        }
+    </style>
+</head>
+
+<body >
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+    <div class="main-sec" id="home">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light shift">
+                <div class="logo">
+                    <h1>
+                        <a class="navbar-brand" href="#">
+                            <i class="fab fa-firstdraft"></i> Company</a>
+                    </h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/company_home/">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Raw Materials
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/natural_raw_materials/">Natural</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/synthetic_raw_materials/">Synthetic</a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               View Materials
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/natural_send_vendor/">Natural</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/synthetic_send_vendor/">Synthetic</a>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Alternative Day
+                                <i class="fas fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/view_alternative_day_nal/">View Alternative Day For Natural</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/view_alternative_day_syn/">View Alternative Day For Synthetic</a>
+                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/natural_send_process_unit/">Send To Process Unit</a>
+                                 <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/syn_send_process_unit/">Send To Process Unit</a>
+
+
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/company_logout/">logout</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+        <!--//header-->
+    </div>
+
+    <div class="slider">
+        <div class="callbacks_container">
+            <ul class="rslides callbacks callbacks1" id="slider4">
+                <li>
+                    <div class="banner-top">
+                        <div class="covering">
+                            <div class="container">
+                                {% block content %}
+                                {% endblock %}
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+        <div class="clearfix"> </div>
+
+
+
+    <script src="{% static 'index/js/jquery-2.2.3.min.js' %}"></script>
+
+    <script src="{% static 'index/js/responsiveslides.min.js' %}"></script>
+    <script>
+        $(function() {
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: false,
+                speed: 1000,
+                namespace: "callbacks",
+                before: function() {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function() {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
+    <!-- //banner slider -->
+    <!-- dropdown nav -->
+    <script>
+        $(document).ready(function() {
+            $(".dropdown").hover(
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
+    </script>
+
+    <!-- //dropdown nav -->
+    <script src="{% static 'index/js/jquery.sliderPro.min.js' %}{% static 'index/"></script>
+    <script src="{% static 'index/js/jquery.fancybox.pack.js' %}{% static 'index/"></script>
+    <script>
+        $(document).ready(function($) {
+            $('#example2').sliderPro({
+                width: 350,
+                height: 400,
+                visibleSize: '100%',
+                forceSize: 'fullWidth',
+                autoSlideSize: true
+            });
+
+            // instantiate fancybox when a link is clicked
+            $(".slider-pro").each(function() {
+                var slider = $(this);
+
+                slider.find(".sp-image").parent("a").on("click", function(event) {
+                    event.preventDefault();
+
+                    if (slider.hasClass("sp-swiping") === false) {
+                        var sliderInstance = slider.data("sliderPro"),
+                            isAutoplay = sliderInstance.settings.autoplay;
+
+                        $.fancybox.open(slider.find(".sp-image").parent("a"), {
+                            index: $(this).parents(".sp-slide").index(),
+                            afterShow: function() {
+                                if (isAutoplay === true) {
+                                    sliderInstance.settings.autoplay = false;
+                                    sliderInstance.stopAutoplay();
+                                }
+                            },
+                            afterClose: function() {
+                                if (isAutoplay === true) {
+                                    sliderInstance.settings.autoplay = true;
+                                    sliderInstance.startAutoplay();
+                                }
+                            }
+
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- /timeline -->
+    <script src="{% static 'index/js/timeline.min.js' %}"></script>
+    <script>
+        timeline(document.querySelectorAll('.timeline'), {
+            forceVerticalMode: 700,
+            mode: 'horizontal',
+            verticalStartPosition: 'left',
+            visibleItems: 4
+        });
+    </script>
+    <!-- //timeline -->
+    <!-- //js -->
+    <script src="{% static 'index/js/bootstrap.js' %}"></script>
+    <!--/ start-smoth-scrolling -->
+    <script src="{% static 'index/js/move-top.js' %}"></script>
+    <script src="{% static 'index/js/easing.js' %}"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            /*
+            						var defaults = {
+            							  containerID: 'toTop', // fading element id
+            							containerHoverID: 'toTopHover', // fading element hover id
+            							scrollSpeed: 1200,
+            							easingType: 'linear'
+            						 };
+            						*/
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!--// end-smoth-scrolling -->
+</body>
+
+</html>

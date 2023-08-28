@@ -1,0 +1,11 @@
+{% extends 'vendor/vendor_base.html' %}
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+   </script>
+<div class="container">
+   <h1 style="color:white;">Welcome to vendor Home Page</h1>
+</div>
+{% endblock %}

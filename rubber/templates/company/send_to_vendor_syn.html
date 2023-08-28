@@ -1,0 +1,69 @@
+{% extends 'company/company_base.html'%}
+{% block content %}
+<script>
+{% for m in messages %}
+      alert('{{ m }}');
+{% endfor %}
+</script>
+<div>
+    <div class="container" style="margin-top:5px"><br><br>
+        <center>
+            <h1 style="color:white;">Send Synthetic Rubber Raw materials</h1></center>
+        <br><br>
+
+
+        <table class="table" style="margin-left:-100px; font-size:14px;">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+
+                <th>Mineral Type</th>
+                <th>Polymer Type</th>
+                <th>Gases</th>
+                <th>Rubber Type</th>
+                <th>Duration</th>
+                <th>Industry</th>
+                <th>Product</th>
+                <th>Storage Type</th>
+                <th>Chemical Type</th>
+                <th>Property</th>
+                <th>Need</th>
+                <th>subject</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in synthetic %}
+            <tr style="background-color:#00204a;color:white;text-align: center;">
+
+
+                <td>{{i.mineral_type}}</td>
+                <td>{{i.polymer_type}}</td>
+                <td>{{i.gases}}</td>
+                <td>{{i.rubber_type}}</td>
+                <td>{{i.duration}}</td>
+                <td>{{i.industry}}</td>
+                <td>{{i.product}}</td>
+                <td>{{i.storage_type}}</td>
+                <td>{{i.chemical_type}}</td>
+                <td>{{i.property}}</td>
+                <td>{{i.need_chemical}}</td>
+                {% if i.send_synthetic is False %}
+
+                <td><a href="/synthetic_company/{{i.id}}/"><button class="btn btn-info">SEND TO VENDOR</button></a></td>
+                {% else %}
+                <td> Successfully send</td>
+
+
+            </tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
+
